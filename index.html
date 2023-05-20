@@ -3,10 +3,18 @@
         <title>Calculator </title>
         <link rel ="stylesheet" type="text/css" href="pg2.css">
         <link rel ="stylesheet" type="text/css" href="pg3.css">
+        <script>
+        function backSpace() {
+            var bsp = document.form.answer.value;
+            document.form.answer.value = bsp.substring(0, bsp.length - 1);
+        }
+    </script>
 <body>
 <div class="container">
     <form name="form">
         <input type="text" placeholder="0" name="answer" class="calculation_input" disabled>
+        <input type="button" value="⌫" onclick="backSpace()" class="btn">
+        <br>
         <input type="button" value="AC" onclick="form.answer.value = '' " class="btn" id="AC">
         <input type="button" value="%" onclick="form.answer.value += " % " " class="btn">
         <input type="button" value="xx" onclick="form.answer.value += '**' " class="btn">
